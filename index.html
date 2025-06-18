@@ -2,42 +2,59 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="2;url=https://wa.me/5492281349289?text=%F0%9F%8E%B0%20Holaa%2C%20quiero%20crear%20un%20usuario%20para%20empezar%20a%20jugar%20%F0%9F%98%84">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redireccionando a WhatsApp...</title>
   <style>
     body {
       background-color: #25D366;
       color: white;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
       height: 100vh;
       margin: 0;
-      text-align: center;
+      flex-direction: column;
     }
 
     .whatsapp-logo {
       width: 80px;
-      height: 80px;
       margin-bottom: 20px;
     }
 
-    .loading {
-      font-size: 1.5rem;
-      margin-top: 10px;
-      animation: pulse 1.5s infinite;
+    h1 {
+      font-size: 24px;
+      margin: 0;
     }
 
-    @keyframes pulse {
-      0% { opacity: 0.6; }
-      50% { opacity: 1; }
-      100% { opacity: 0.6; }
+    .subtext {
+      font-size: 16px;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    .loading-dots::after {
+      content: '';
+      display: inline-block;
+      animation: dots 1.2s steps(3, end) infinite;
+    }
+
+    @keyframes dots {
+      0% { content: '.'; }
+      33% { content: '..'; }
+      66% { content: '...'; }
     }
   </style>
+  <script>
+    setTimeout(function () {
+      window.location.href = "https://wa.me/5492281349289?text=%F0%9F%8E%B0%20Holaa%2C%20quiero%20crear%20un%20usuario%20para%20empezar%20a%20jugar%20%F0%9F%98%84";
+    }, 2000);
+  </script>
 </head>
 <body>
-  <img class="whatsapp-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  <h1>Redirecci
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Logo WhatsApp" class="whatsapp-logo">
+  <h1>Redireccionando a WhatsApp<span class="loading-dots"></span></h1>
+  <p class="subtext">Espere un momento mientras lo llevamos al chat 🎰</p>
+</body>
+</html>
