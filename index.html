@@ -47,9 +47,14 @@
     }
   </style>
   <script>
-    setTimeout(function () {
-      window.location.href = "https://wa.me/5492281349289?text=%F0%9F%8E%B0%20Holaa%2C%20quiero%20crear%20un%20usuario%20para%20empezar%20a%20jugar%20%F0%9F%98%84";
-    }, 2000);
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        const phone = "5492281349289";
+        const message = encodeURIComponent("🎰 Holaa, quiero crear un usuario para empezar a jugar 😄");
+        const url = `https://wa.me/${phone}?text=${message}`;
+        window.location.href = url;
+      }, 2000);
+    });
   </script>
 </head>
 <body>
@@ -58,3 +63,4 @@
   <p class="subtext">Espere un momento mientras lo llevamos al chat 🎰</p>
 </body>
 </html>
+
